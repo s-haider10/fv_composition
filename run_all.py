@@ -39,7 +39,7 @@ def main():
         print(f"STAGE {stage_id}: {desc}")
         print("=" * 70)
         t0 = time.time()
-        result = subprocess.run(["python", script], capture_output=False)
+        result = subprocess.run(["python", f"stages/{script}"], capture_output=False)
         elapsed = time.time() - t0
         print(f"\n[Stage {stage_id} done in {elapsed:.1f}s, exit={result.returncode}]")
         if result.returncode != 0:

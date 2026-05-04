@@ -8,6 +8,8 @@ Multiple seeds for variance estimate.
 Output: results/02_atom_accuracy.json
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 import numpy as np
 from utils_pipeline import (load_model, make_icl_prompt, generate_no_patch,
                             make_atom_classifier, summarize, fmt_dist,

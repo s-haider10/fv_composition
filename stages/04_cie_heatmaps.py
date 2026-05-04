@@ -10,6 +10,8 @@ CIE(layer, head) = mean log-prob recovery on correct token after patching.
 Output: results/04_cie_heatmaps.json (per atom: layer x head matrix)
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 import numpy as np
 import torch
 from utils_pipeline import (load_model, get_layer, unwrap_saved, make_icl_prompt,

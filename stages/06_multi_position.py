@@ -7,6 +7,8 @@ Patches FV at every position of zero-shot prompt and reports best position.
 Output: results/06_multi_position.json
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 import torch
 from utils_pipeline import (load_model, get_layer, unwrap_saved, make_zero_shot,
                             make_composition_classifier, summarize,

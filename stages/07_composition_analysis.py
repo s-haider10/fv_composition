@@ -11,6 +11,8 @@ Uses CIE-FVs from stage 5, patches at each composition's best layer.
 Output: results/07_composition_analysis.json
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 import numpy as np
 import torch
 from utils_pipeline import (load_model, generate_with_patch, generate_no_patch,

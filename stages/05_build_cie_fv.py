@@ -10,6 +10,8 @@ Compares: residual-stream FV vs CIE-based FV vs random.
 Output: results/05_cie_fv_validation.json
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 import numpy as np
 import torch
 from utils_pipeline import (load_model, get_layer, unwrap_saved, make_icl_prompt,

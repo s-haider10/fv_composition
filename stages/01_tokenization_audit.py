@@ -6,6 +6,8 @@ Flag multi-token answers and unexpected splits.
 Output: results/01_tokenization_audit.txt + .json
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 from utils_pipeline import load_model, audit_tokenization, RESULTS_DIR
 from tasks import TASKS, COMPOSITIONS
 

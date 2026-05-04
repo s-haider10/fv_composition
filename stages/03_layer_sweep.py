@@ -7,6 +7,8 @@ Find best layer per atom. This addresses "Layer 15 chosen on country_capital alo
 Output: results/03_layer_sweep.json + heatmap data
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 import numpy as np
 import torch
 from utils_pipeline import (load_model, extract_fv_residual, generate_with_patch,

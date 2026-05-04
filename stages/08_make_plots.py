@@ -4,6 +4,8 @@ STAGE 8: Generate publication plots.
 Reads stages 03-07 output, produces matplotlib figures for the paper.
 """
 import json
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
